@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="container py-3">
     <form @submit="addTodo">
       <input type="text" v-model="title" name="title" placeholder="Add Todo..." />
-      <input type="submit" value="Submit" class="btn" />
+      <input type="submit" value="Submit" class="btn btn-primary" />
     </form>
   </div>
 </template>
