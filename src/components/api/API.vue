@@ -21,25 +21,25 @@ export default {
     };
   },
   mounted() {
-    // axios
-    //   .get("https://api.coindesk.com/v1/bpi/currentprice.json")
-    //   .then(response => (this.info = response.data.bpi))
-    //   .catch(error => {
-    //       console.log(error)
-    //       this.errored = true
-    //   })
-    //   .finally(() => this.loading = false)
+    axios
+      .get("https://api.coindesk.com/v1/bpi/currentprice.json")
+      .then(response => (this.info = response.data.bpi))
+      .catch(error => {
+          console.log(error)
+          this.errored = true
+      })
+      .finally(() => this.loading = false)
 
-    fetch('https://api.coindesk.com/v1/bpi/currentprice.json', {mode:'cors'})
-    .then(function(response){
-        return response.text();
-    })
-    .then(function(text){
-        console.log('Request successful', text);
-    })
-    .catch(function(error){
-        console.log('Request failed', error)
-    });
+    // fetch('https://api.coindesk.com/v1/bpi/currentprice.json', {mode:'cors'})
+    // .then(function(response){
+    //     return response.text();
+    // })
+    // .then(function(text){
+    //     console.log('Request successful', text);
+    // })
+    // .catch(function(error){
+    //     console.log('Request failed', error)
+    // });
   },
   filters: {
     currencydecimal(value) {
