@@ -3,6 +3,7 @@
     <Header />
     <AddTodo v-on:add-todo="addTodo"/>
     <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo" />
+    <API />
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import Todos from "./components/Todos";
 import Header from "./components/layout/Header";
 import AddTodo from "./components/AddTodo";
+import API from "./components/api/API";
 
 export default {
   name: "app",
   components: {
     Todos,
     Header,
-    AddTodo
+    AddTodo,
+    API
   },
   data() {
     return {
